@@ -1,8 +1,30 @@
 package org.example.services;
 
-import org.example.address.Endereco;
-import org.example.user.Paciente;
+import java.util.Date;
 
 public class Consulta {
 
+    private String paciente;
+    private Date data;
+
+    public Consulta(String paciente, Date data) {
+        this.paciente = paciente;
+        this.data = data;
+    }
+
+    public String getPaciente() {
+        return paciente;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setPaciente(String paciente) {
+        this.paciente = paciente;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
 }
