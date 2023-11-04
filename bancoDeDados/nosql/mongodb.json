@@ -1,0 +1,114 @@
+db.paciente.insertMany([
+  {
+    "NOME_PACIENTE": "Nome1",
+    "IDADE": 30,
+    "SEXO": "Masculino",
+    "RUA": "Rua 1",
+    "CEP": 12345,
+    "BAIRRO": "Bairro 1",
+    "CIDADE": "Cidade 1",
+    "ESTADO": "Estado 1",
+    "ID_PACIENTE": 1,
+    "CODIGO_USUARIO": 1001,
+    "NOME_CARTAO": "Cartao1",
+    "DATA_NASCIMENTO": ISODate("1993-01-15T00:00:00Z"),
+    "NOME_MAE": "Mae1",
+    "RG": 123456,
+    "DATA_EXPEDICAO_RG": ISODate("2010-05-20T00:00:00Z"),
+    "CPF": 987654,
+    "NUMERO_CNS": 789012,
+    "TELEFONE": 555555,
+    "CNPJ": 123,
+    "IE": 456,
+    "PACIENTE_TIPO": 1
+  },
+  // Outros documentos de pacientes
+]);
+
+db.consulta.insertMany([
+  {
+    "ID_CONSULTA": 1,
+    "ID_PACIENTE": 1,
+    "DATA_SOLICITACAO": ISODate("2023-11-04T00:00:00Z"),
+    "FK_PACIENTE_ID_PACIENTE": 1,
+    "FK_PACIENTE_CODIGO_USUARIO": 1001
+  },
+  // Outros documentos de consultas
+]);
+
+db.triagem.insertMany([
+  {
+    "ID_TRIAGEM": 1,
+    "TIPO_TRIAGEM": "Tipo1",
+    "FK_MEDICO_COD_MEDICO": 100
+  },
+  // Outros documentos de triagens
+]);
+
+db.medico.insertMany([
+  {
+    "COD_MEDICO": 100,
+    "NOME_MEDICO": "Medico1",
+    "CEP": 54321,
+    "RUA": "Rua Medico",
+    "BAIRRO": "Bairro Medico",
+    "CIDADE": "Cidade Medico",
+    "ESTADO": "Estado Medico",
+    "TELEFONE": 666666
+  },
+  // Outros documentos de médicos
+]);
+
+db.medicamento.insertMany([
+  {
+    "COD_MEDICAMENTO": 1,
+    "NOME": "Medicamento1",
+    "POSOLOGIA": "Posologia1"
+  },
+  // Outros documentos de medicamentos
+]);
+
+db.instrumentos.insertMany([
+  {
+    "COD_INSTRUMENTO": 1,
+    "NOME": "Instrumento1",
+    "TIPO": "Tipo1"
+  },
+  // Outros documentos de instrumentos
+]);
+
+db.tem.insertMany([
+  {
+    "FK_CONSULTA_ID_CONSULTA": 1,
+    "FK_CONSULTA_ID_PACIENTE": 1,
+    "FK_TRIAGEM_ID_TRIAGEM": 1
+  },
+  // Outros documentos de relações entre consultas, pacientes e triagens
+]);
+
+db.receita.insertMany([
+  {
+    "FK_MEDICO_COD_MEDICO": 100,
+    "FK_MEDICAMENTO_COD_MEDICAMENTO": 1
+  },
+  // Outros documentos de receitas
+]);
+
+db.possui.insertMany([
+  {
+    "FK_MEDICO_COD_MEDICO": 100,
+    "FK_INSTRUMENTOS_COD_INSTRUMENTO": 1
+  },
+  // Outros documentos de relações entre médicos e instrumentos
+]);
+
+db.examina.insertMany([
+  {
+    "FK_MEDICO_COD_MEDICO": 100,
+    "FK_PACIENTE_ID_PACIENTE": 1,
+    "FK_PACIENTE_CODIGO_USUARIO": 1001,
+    "DATA_CONSULTA": ISODate("2023-11-04T10:00:00Z"),
+    "HORARIO_CONSULTA": ISODate("2023-11-04T10:30:00Z")
+  },
+  // Outros documentos de exames
+]);
