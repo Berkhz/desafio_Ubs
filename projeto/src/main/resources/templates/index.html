@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+</head>
+<body>
+<h1>Bem-vindo à Página Inicial</h1>
+
+<div id="dadosMedico">
+    <!-- Os dados do médico serão exibidos aqui -->
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // URL do seu endpoint no backend
+        const url = '/medico';
+
+        // Realiza uma requisição GET para obter dados do médico
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const dadosMedico = document.getElementById('dadosMedico');
+
+                data.forEach(medico => {
+                    const p = document.createElement('p');
+                    p.textContent = `ID: ${medico.id}, Nome: ${medico.nomeMedico}, Cidade: ${medico.cidade}`;
+                    dadosMedico.appendChild(p);
+                });
+            })
+            .catch(error => console.error('Erro ao recuperar dados do médico:', error));
+    });
+</script>
+</body>
+</html>
