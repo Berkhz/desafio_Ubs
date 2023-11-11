@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ubsdigital</groupId>
-	<artifactId>codigoFonte</artifactId>
+	<artifactId>ubsdigital</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>projeto</name>
 	<description>Demo project for Spring Boot</description>
@@ -97,7 +97,14 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.3.1</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>
