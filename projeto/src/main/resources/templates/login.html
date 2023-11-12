@@ -5,9 +5,129 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/css/style.css">
     <title>Login</title>
 </head>
-<body>
+<style> 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 16px; 
+    background-color: #1e2ca6;
+}
 
+.container {
+    text-align: center;
+}
+
+.imagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brasao {
+    width: 150px;
+    margin-left: 200px;
+}
+
+.logo {
+    width: 400px; 
+}
+
+.apresentacao h1 {
+    font-size: 24px; 
+}
+
+.dados-usuario {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px; 
+}
+
+input,
+button {
+    width: 100%;
+    padding: 12px; 
+    margin-bottom: 20px; 
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+    font-family: sans-serif;
+    border: none; 
+    border-radius: 8px; 
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
+
+.desvios {
+    text-align: center;
+}
+
+.desvios a {
+    margin-right: 30px; 
+    font-size: 16px; 
+    font-family: sans-serif;
+}
+
+.desvios a:hover {
+    text-decoration: underline;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="imagens">
+            <img class="brasao" src="../static/brasao.png" alt="Brasão de Maringá">
+            <img class="logo" src="../static/logo.png" alt="Logo da UBS Digital">
+        </div>
+
+        <div class="apresentacao">
+            <h1>Faça o seu login 
+                <br>no aplicativo</h1>
+        </div>
+
+        <div class="dados-usuario">
+            <label for="fuser">Usuário:</label>
+            <input id="fuser" type="text">
+            <label for="fpassword">Senha:</label>
+            <input id="fpassword" type="password">
+            <button>Entrar</button>
+        </div>
+
+        <div class="desvios">
+            <a href="url">Criar uma conta</a> 
+            <br>
+            <a href="url">Esqueceu a senha?</a>
+        </div>
+    </div>
 </body>
 </html>
