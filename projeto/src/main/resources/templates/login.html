@@ -21,22 +21,28 @@ body {
 }
 
 .container {
+    position: relative;
     text-align: center;
+    margin-top: 0px;
 }
 
 .imagens {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .brasao {
-    width: 150px;
+    position: absolute;
+    width: 100px;
     margin-left: 200px;
+    margin-top: -70px;
 }
 
 .logo {
-    width: 400px; 
+    top: 10px;
+    width: 300px; 
 }
 
 .apresentacao h1 {
@@ -44,16 +50,28 @@ body {
 }
 
 .dados-usuario {
-    display: flex;
-    flex-direction: column;
     max-width: 400px;
     margin: 0 auto;
 }
 
 label {
-    display: block;
+    text-align: left;
     margin-bottom: 5px;
-    font-size: 16px; 
+    font-size: 16px;
+    width: 100%;
+    display: block;
+}
+
+.dados-usuario input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 input,
@@ -66,17 +84,17 @@ button {
     background-color: #fff;
     font-family: sans-serif;
     border: none; 
-    border-radius: 8px; 
+    border-radius: 12px; 
 }
 
 input {
     width: 100%;
-    padding: 8px;
+    padding: 12px;
     margin-bottom: 10px;
     color: #000;
     background-color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 button {
@@ -102,6 +120,17 @@ button {
 .desvios a:hover {
     text-decoration: underline;
 }
+
+.botao-entrar {
+    width: 50%;
+    padding: 8px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin-left: 147px;
+}
 </style>
 <body>
     <div class="container">
@@ -120,8 +149,12 @@ button {
             <input id="fuser" type="text">
             <label for="fpassword">Senha:</label>
             <input id="fpassword" type="password">
-            <button>Entrar</button>
         </div>
+
+        <div class="botao">
+            <button class="botao-entrar">Entrar</button>
+        </div>
+        
 
         <div class="desvios">
             <a href="url">Criar uma conta</a> 
