@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+    <title>Tela Inicial</title>
+</head>
+<style> 
+* {
+    color: white;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 16px; 
+    background-color: #1e2ca6;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    margin-top: 110px;
+}
+
+.brasao {
+    position: absolute;
+    width: 100px;
+    margin-left: 25px;
+    margin-top: 200px;
+}
+
+.logo {
+    width: 300px; 
+}
+
+.mensagem {
+    margin-top: 20px;
+}
+
+.apresentacao h1 {
+    font-size: 24px; 
+}
+
+.dificuldade-acesso {
+    margin-top: 20px;
+}
+
+.desvios {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.desvios a {
+    margin-right: 30px; 
+    font-size: 16px; 
+    font-family: sans-serif;
+}
+
+.desvios a:hover {
+    text-decoration: underline;
+}
+
+input,
+button {
+    width: 100%;
+    padding: 12px; 
+    margin-bottom: 20px; 
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+    font-family: sans-serif;
+    border: none; 
+    border-radius: 12px; 
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="imagens">
+            <div class="logo">
+                <img src="../static/logo.png" alt="Logo da UBS Digital">
+            </div>
+            <div class="brasao">
+                <img class="brasao" src="../static/brasao.png" alt="Brasão de Maringá">
+            </div>
+        </div>
+
+        <div class="mensagem">
+            <h1>Bem-vindo de volta</h1>
+        </div>
+
+        <div class="apresentacao">
+            <h1>Faça login</h1>
+        </div>
+
+        <div class="botao">
+            <button class="botao-entrar">Entrar</button>
+        </div>
+
+        <div class="primeira-vez">
+            <h1>Primeira vez?</h1>
+        </div>
+
+        <div class="botao">
+            <button class="botao-registrar">Registre-se</button>
+        </div>
+
+        <div class="dificuldade-acesso">
+            <p>Dificuldade no acesso?</p>
+            <a href="url">Clique aqui</a>
+        </div>
+
+    </div>
+</body>
+</html>
