@@ -6,9 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
-    <title>Login</title>
+    <title>Registro</title>
 </head>
 <style> 
+
 * {
     color: white;
     font-family: sans-serif;
@@ -135,6 +136,17 @@ button {
     border-radius: 8px;
     margin-left: 147px;
 }
+
+.apresentacao h1 {
+    font-size: 24px; 
+    margin-bottom: 20px;
+}
+
+.dados-usuario {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 </style>
 <body>
     <div class="container">
@@ -144,27 +156,30 @@ button {
         </div>
 
         <div class="apresentacao">
-            <h1>Faça o seu login 
-                <br>no aplicativo</h1>
+            <h1>Registre-se</h1>
         </div>
 
-        <div class="dados-usuario">
-            <label for="fuser">Usuário:</label>
-            <input id="fuser" type="text">
-            <label for="fpassword">Senha:</label>
-            <input id="fpassword" type="password">
+        <div class="registro">
+            <label for="fname">Nome completo:</label>
+            <input id="fname" type="text">
+            <label for="femail">Email:</label>
+            <input id="femail" type="email">
+            <label for="fpassword_reg">Senha:</label>
+            <input id="fpassword_reg" type="password">
+            <label for="fconfirm_password">Confirmar Senha:</label>
+            <input id="fconfirm_password" type="password">
         </div>
 
-        <form action="http://localhost:63342/desafio_Ubs/projeto/src/main/resources/templates/index.html?_ijt=b4l4ao86hgkbu4l317d5bj7vp9&_ij_reload=RELOAD_ON_SAVE">
-            <input type="submit" value="Entrar" />
-        </form>
+        <div class="botao">
+            <form action="http://localhost:63342/desafio_Ubs/projeto/src/main/resources/templates/login.html?_ijt=b4l4ao86hgkbu4l317d5bj7vp9&_ij_reload=RELOAD_ON_SAVE">
+                <input type="submit" value="Registrar" />
+            </form>
+        </div>
         
-
         <div class="desvios">
-            <a href="url">Criar uma conta</a> 
-            <br>
-            <a href="url">Esqueceu a senha?</a>
+            <a href="#">Já possui uma conta?</a>
         </div>
     </div>
+
 </body>
 </html>
