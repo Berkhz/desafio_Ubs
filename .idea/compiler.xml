@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ubsdigital" />
         <module name="codigoFonte" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="codigoFonte" options="-parameters" />
       <module name="codigoFonte (1)" options="-parameters" />
       <module name="codigoFonte (2)" options="-parameters" />
+      <module name="ubsdigital" options="-parameters" />
     </option>
   </component>
 </project>
